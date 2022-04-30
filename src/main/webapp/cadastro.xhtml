@@ -39,10 +39,12 @@
                             <h:outputLabel value="Estado:" for="Estado" />
                             <p:selectOneMenu converter="estadoConverter">
                                 <f:selectItems value="#{estadoMB.estadoss}" />
-
                             </p:selectOneMenu>
+                          
                             <h:outputLabel value="Cidade:" for="cidade" />
-                            <p:inputText id="cidade" label="cidade" value="" />
+                             <p:selectOneMenu converter="cidadeConverter">
+                                <f:selectItems value="" />
+                            </p:selectOneMenu>
 
 
 

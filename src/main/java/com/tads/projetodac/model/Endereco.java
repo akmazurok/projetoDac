@@ -20,12 +20,8 @@ import javax.persistence.Table;
 public class Endereco implements Serializable {
 
     private int id;
-    private String logradouro;
-    private int numero;
-    private String cep;
-    private String complemento;
-    private String bairro;
-    private Estado estado;
+    private String endereco;
+     private Estado estado;
     private Cidade cidade;
 
     public Endereco() {
@@ -33,12 +29,8 @@ public class Endereco implements Serializable {
         this.cidade = new Cidade();
     }
 
-    public Endereco(String logradouro, int numero, String cep, String complemento, String bairro, Estado estado, Cidade cidade) {
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.cep = cep;
-        this.complemento = complemento;
-        this.bairro = bairro;
+    public Endereco(String endereco, Estado estado, Cidade cidade) {
+        this.endereco = endereco;
         this.estado = estado;
         this.cidade = cidade;
     }    
@@ -54,63 +46,28 @@ public class Endereco implements Serializable {
         this.id = id;
     }
 
-    @Column(name="logradouro")
-    public String getLogradouro() {
-        return logradouro;
+    @Column(name="endereco")
+     public String getEndereco() {
+        return endereco;
     }
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    @Column(name="numero")
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    @Column(name="cep")
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    @Column(name="complemento")
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
-
-    @Column(name="bairro")
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     @OneToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="tb_estado_id")
+    @JoinColumn(name="estado_id")
     public Estado getEstado() {
         return estado;
     }
+   
 
     public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
     @OneToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="tb_cidade_id")
+    @JoinColumn(name="cidade_id")
     public Cidade getCidade() {
         return cidade;
     }
