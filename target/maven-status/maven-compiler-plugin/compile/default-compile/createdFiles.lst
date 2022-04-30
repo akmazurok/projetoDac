@@ -1,0 +1,13 @@
+com\tads\projetodac\facade\CidadeFacade.class
+com\tads\projetodac\facade\EstadoFacade.class
+com\tads\projetodac\dao\CidadeDAO.class
+com\tads\projetodac\view\MaskView.class
+com\tads\projetodac\model\Endereco.class
+com\tads\projetodac\util\HibernateUtil.class
+com\tads\projetodac\resources\JakartaEE8Resource.class
+com\tads\projetodac\converter\EstadoConverter.class
+com\tads\projetodac\dao\EstadoDAO.class
+com\tads\projetodac\model\Cidade.class
+com\tads\projetodac\model\Estado.class
+com\tads\projetodac\JakartaRestConfiguration.class
+com\tads\projetodac\mb\EstadoMB.class

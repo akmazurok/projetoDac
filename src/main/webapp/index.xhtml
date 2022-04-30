@@ -1,0 +1,32 @@
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml"
+             xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="corpo">
+
+        <!--        <p:carousel autoplayInterval="3000" circular="true" numVisible="1" >
+                    <p:graphicImage library="img" name="01.jpg"/>
+                    <p:graphicImage library="img" name="02.jpg"/>
+                    <p:graphicImage library="img" name="03.jpg"/>
+                    <p:graphicImage library="img" name="04.jpg"/>
+                    <p:graphicImage library="img" name="05.jpg"/>
+                </p:carousel>-->
+
+        <p:galleria numVisible="5" circular="true" autoPlay="true" transitionInterval="2000" style="max-width:1000px">
+            <p:graphicImage library="img" name="01.jpg"  alt="" style="width: 100%; display: block;"/>
+            <p:graphicImage library="img" name="02.jpg"  alt="" style="width: 100%; display: block;"/>
+            <p:graphicImage library="img" name="03.jpg"  alt="" style="width: 100%; display: block;"/>
+            <p:graphicImage library="img" name="04.jpg"  alt="" style="width: 100%; display: block;"/>
+            <p:graphicImage library="img" name="05.jpg"  alt="" style="width: 100%; display: block;"/>
+
+        </p:galleria>
+        <div id="texto" class="p-text-center">
+              <h5>Melhor site de encontros do Brasil. Faça seu cadastro grátis! </h5>
+              <p:button value="Quero participar!" outcome="cadastro"/>
+        </div>
+      
+    </ui:define>
+
+</ui:decorate>
