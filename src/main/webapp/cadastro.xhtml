@@ -19,10 +19,13 @@
 
                         <h:panelGrid columns="2" class="p-col-12">
                             <h:outputLabel value="Nome:" for="nome" />
-                            <p:inputText id="nome" label="nome"/>
+                            <p:inputText id="nome" label="nome" value="#{usuarioMB.usuario.nome}" required="true"/>
 
                             <h:outputLabel value="E-mail:" for="email" />
-                            <p:inputText id="email" label="email" />
+                            <p:inputText id="email" label="email" value="#{usuarioMB.usuario.email}" required="true"/>
+
+                            <h:outputLabel value="Senha:" for="senha" />
+                            <p:inputText id="senha" label="email" value="#{usuarioMB.usuario.senha}" required="true"/>
 
                             <h:outputLabel value="CPF:" for="cpf" />
                             <p:inputMask id="cpf" value="#{maskView.cpf}" mask="999.999.999-99" validateMask="true"/>
@@ -35,21 +38,20 @@
 
                             <h:outputLabel value="Endereço:" for="endereco" />
                             <p:inputText id="end" label="end"/>
-                          
+
                             <h:outputLabel value="Estado:" for="Estado" />
-                            <p:selectOneMenu converter="estadoConverter">
-                                <f:selectItems value="#{estadoMB.estadoss}" />
+                            <p:selectOneMenu id="estado" value="#{estadoMB.selecionado}" converter="estadoConverter">
+                                <f:selectItems value="#{estadoMB.estados}" var="estado" itemLabel="#{estado.nome}"
+                                               itemValue="#{estado}" />
                             </p:selectOneMenu>
-                          
+
                             <h:outputLabel value="Cidade:" for="cidade" />
-                             <p:selectOneMenu converter="cidadeConverter">
+                            <p:selectOneMenu converter="cidadeConverter">
                                 <f:selectItems value="" />
                             </p:selectOneMenu>
 
-
-
                             <!--Grid -->
-                            <p:commandButton id="btnSalvar" value="Cadastrar" />
+                            <p:commandButton id="btnSalvar" value="Cadastrar" action="#{usuarioMB.cadastrar()}" />
                         </h:panelGrid>
 
                     </h:form>

@@ -1,3 +1,6 @@
+/******************************************************************************/
+/*                                DB - FOREVER                                */
+/******************************************************************************/
 -- Database: forever
 
 -- DROP DATABASE IF EXISTS forever;
@@ -10,6 +13,7 @@ CREATE DATABASE forever
     LC_CTYPE = 'Portuguese_Brazil.1252'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
+
 	
 /******************************************************************************/
 /*                                   Estado                                   */
@@ -5692,3 +5696,41 @@ INSERT INTO cidade ("id", "id_estado", "nome") VALUES (5506, 27, 'Wanderlândia'
 INSERT INTO cidade ("id", "id_estado", "nome") VALUES (5507, 27, 'Xambioá');
 
 COMMIT WORK;
+
+/******************************************************************************/
+/*                                   Endereço                                 */
+/******************************************************************************/
+
+CREATE TABLE IF NOT EXISTS endereco
+(
+    id serial primary key,
+    endereco character varying(50) not null,
+    estado_id INT not null,
+	cidade_id INT not null,
+	CONSTRAINT fk_estado FOREIGN KEY (estado_id)
+      REFERENCES estado(id),
+	CONSTRAINT fk_cidade FOREIGN KEY (cidade_id)
+      REFERENCES cidade(id),
+);
+
+
+/******************************************************************************/
+/*                                  Usuario                                   */
+/******************************************************************************/
+
+CREATE TABLE IF NOT EXISTS usuario
+(
+    id serial primary key,
+    nome character varying(50) not null,
+    email character varying(50) not null,
+    senha character varying(255) NOT NULL
+);
+
+
+/******************************************************************************/
+/*                                                                      */
+/******************************************************************************/
+
+
+
+

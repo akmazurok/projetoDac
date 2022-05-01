@@ -1,5 +1,6 @@
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\model\Cidade.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\facade\EstadoFacade.java
+C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\converter\CidadeConverter.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\JakartaRestConfiguration.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\model\Estado.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\converter\EstadoConverter.java
@@ -10,4 +11,5 @@ C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\proj
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\facade\CidadeFacade.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\resources\JakartaEE8Resource.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\util\HibernateUtil.java
+C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\model\Usuario.java
 C:\Users\akmaz\Documents\NetBeansProjects\ProjetoDac\src\main\java\com\tads\projetodac\dao\CidadeDAO.java

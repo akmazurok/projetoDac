@@ -3,6 +3,7 @@ package com.tads.projetodac.mb;
 import com.tads.projetodac.facade.EstadoFacade;
 import com.tads.projetodac.model.Estado;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
@@ -14,14 +15,14 @@ import javax.inject.Named;
  *
  * @author akmaz
  */
-@SessionScoped
+
 @Named(value = "EstadoMB")
+@SessionScoped
 public class EstadoMB implements Serializable {
 
-    private Estado selecionado;
-    private List<Estado> estados;
-    private List<Estado> estadoss;
-
+    Estado selecionado = new Estado();
+    List<Estado> estados = new ArrayList();
+    
     public EstadoMB() {
     }
 
@@ -38,7 +39,6 @@ public class EstadoMB implements Serializable {
         }
     }
 
-
     public Estado getSelecionado() {
         return selecionado;
     }
@@ -54,5 +54,8 @@ public class EstadoMB implements Serializable {
     public void setEstados(List<Estado> estados) {
         this.estados = estados;
     }
+
+
+ 
 
 }

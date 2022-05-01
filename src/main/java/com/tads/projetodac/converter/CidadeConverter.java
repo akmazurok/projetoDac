@@ -6,8 +6,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
-
-@FacesConverter(value="cidadeConverter", forClass=Cidade.class)
+@FacesConverter(value = "cidadeConverter", forClass = Cidade.class)
 public class CidadeConverter implements Converter {
 
     @Override

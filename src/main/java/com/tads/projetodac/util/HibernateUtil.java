@@ -1,6 +1,7 @@
 package com.tads.projetodac.util;
 
 import com.tads.projetodac.model.Estado;
+import com.tads.projetodac.model.Usuario;
 import java.util.Properties;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -31,14 +32,17 @@ public class HibernateUtil {
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
                 settings.put(Environment.SHOW_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-             
+
                 configuration.setProperties(settings);
 
-                configuration.addAnnotatedClass(Estado.class);
+                configuration.addClass(Estado.class);
+                configuration.addClass(Usuario.class);
+
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
                         configuration.getProperties()).build();
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
